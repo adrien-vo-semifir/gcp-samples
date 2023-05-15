@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "data-utils"
+version = "0.1.0"
+description = ""
+authors = ["Adrien Vossough <adrien.vossough@semifir.com>"]
+readme = "README.md"
+packages = [{include = "data_utils"}]
+
+[tool.poetry.scripts]
+data-utils = "data_utils.app.__main__:start"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+google-cloud-storage = "^2.9.0"
+pandas = "^2.0.1"
+google-cloud-pubsub = "^2.17.0"
+google-cloud-bigquery = "^3.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
