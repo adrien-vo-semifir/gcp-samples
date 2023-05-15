@@ -12,7 +12,7 @@ def upload_blob(bucket_name: str, source_file_name:str, destination_blob_name: s
     """
 
     # Initialiser le client
-    storage_client = storage.Client.from_service_account_json('****.json')
+    storage_client = storage.Client.from_service_account_json('credentials/credentials.json')
 
 
     # récupérer la bucket
@@ -25,4 +25,4 @@ def upload_blob(bucket_name: str, source_file_name:str, destination_blob_name: s
     print(f"File {source_file_name} uploaded to {destination_blob_name}.")
 
 # Usage
-upload_blob('mon bucket', 'fichiers/sample.txt', 'test/sample.txt')
+upload_blob('avm-exemple', 'fichiers/sample.txt', 'test/sample.txt')
